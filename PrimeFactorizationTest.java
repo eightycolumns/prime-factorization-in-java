@@ -23,4 +23,11 @@ public class PrimeFactorizationTest {
     int[] actual = PrimeFactorization.ofInteger(3);
     assertArrayEquals(expected, actual);
   }
+
+  @Test
+  public void testPrimeFactorizationOf5() {
+    int[] expected = {5};
+    int[] actual = PrimeFactorization.ofInteger(5);
+    assertArrayEquals(expected, actual);
+  }
 }
