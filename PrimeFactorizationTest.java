@@ -44,4 +44,11 @@ public class PrimeFactorizationTest {
     int[] actual = PrimeFactorization.ofInteger(90);
     assertArrayEquals(expected, actual);
   }
+
+  @Test
+  public void testPrimeFactorizationOf150() {
+    int[] expected = {2, 3, 5, 5};
+    int[] actual = PrimeFactorization.ofInteger(150);
+    assertArrayEquals(expected, actual);
+  }
 }
