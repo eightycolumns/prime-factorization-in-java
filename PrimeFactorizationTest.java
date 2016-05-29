@@ -4,6 +4,13 @@ import static org.junit.Assert.assertArrayEquals;
 
 public class PrimeFactorizationTest {
   @Test
+  public void testPrimeFactorizationOf1() {
+    int[] expected = {};
+    int[] actual = PrimeFactorization.ofInteger(1);
+    assertArrayEquals(expected, actual);
+  }
+
+  @Test
   public void testPrimeFactorizationOf2() {
     int[] expected = {2};
     int[] actual = PrimeFactorization.ofInteger(2);
