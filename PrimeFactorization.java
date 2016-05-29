@@ -14,11 +14,17 @@ class PrimeFactorization {
 
     for (int i = 2; i <= d; i += 1) {
       while (d % i == 0) {
-        a = Arrays.copyOf(a, a.length + 1);
-        a[a.length - 1] = i;
+        a = push(i, a);
         d /= i;
       }
     }
+
+    return a;
+  }
+
+  private static int[] push(int d, int[] a) {
+    a = Arrays.copyOf(a, a.length + 1);
+    a[a.length - 1] = d;
 
     return a;
   }
