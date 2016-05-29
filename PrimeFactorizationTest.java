@@ -1,8 +1,19 @@
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 
 import static org.junit.Assert.assertArrayEquals;
 
 public class PrimeFactorizationTest {
+  @Rule
+  public ExpectedException thrown = ExpectedException.none();
+
+  @Test
+  public void testPrimeFactorizationOf0() {
+    thrown.expect(IllegalArgumentException.class);
+    PrimeFactorization.ofInteger(0);
+  }
+
   @Test
   public void testPrimeFactorizationOf1() {
     int[] expected = {};

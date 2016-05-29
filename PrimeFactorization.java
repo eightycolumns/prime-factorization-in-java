@@ -4,6 +4,12 @@ class PrimeFactorization {
   private PrimeFactorization() {}
 
   public static int[] ofInteger(int d) {
+    if (d < 1) {
+      throw new IllegalArgumentException(
+        "PrimeFactorization.ofInteger() expects positive integer."
+      );
+    }
+
     int[] a = {};
 
     for (int i = 2; i <= d; i += 1) {
